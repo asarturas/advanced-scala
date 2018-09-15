@@ -123,7 +123,7 @@ import cats.syntax.monadError._       // for ensure
 ```tut:book
 val success = 42.pure[ErrorOr]
 val failure = "Badness".raiseError[ErrorOr, Int]
-success.ensure("Number to low!")(_ > 1000)
+success.ensure("Number too low!")(_ > 1000)
 ```
 
 There are other useful variants of these methods.
